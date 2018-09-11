@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -6,7 +7,10 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   rules: [
     { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
-  ]  
+  ]
 };

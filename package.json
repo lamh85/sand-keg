@@ -12,5 +12,6 @@
   },
   "scripts": {
     "start": "webpack --config webpack.config.js"
-  }
+  },
+  "dependencies": {}
 }
